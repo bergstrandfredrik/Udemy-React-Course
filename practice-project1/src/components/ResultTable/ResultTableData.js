@@ -1,6 +1,6 @@
 const ResultTableData = (props) => {
   return (
-    <tr>
+    <tr key={props.data.year}>
       <td>{props.data.year}</td>
       <td>{props.data.yearlyInterest}</td>
       <td>{props.data.savingsEndOfYear}</td>
