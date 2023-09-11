@@ -4,6 +4,7 @@ import SavingsForm from "./components/SavingsForm/SavingsForm";
 
 function App() {
   const calculateHandler = (userInput) => {
+    console.log(userInput["current-savings"]);
     // Should be triggered when form is submitted
     // You might not directly want to bind it to the submit event on the form though...
 
