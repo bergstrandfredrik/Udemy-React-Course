@@ -7,7 +7,7 @@ import ResultTable from "./components/ResultTable/ResultTable";
 import logo from "./assets/investment-calculator-logo.png";
 
 function App() {
-  const [yearlyData, setYearyData] = useState([]);
+  const [yearlyData, setYearyData] = useState(null);
 
   const calculateHandler = (userInput) => {
     console.log(userInput["current-savings"]);
@@ -29,6 +29,7 @@ function App() {
         yearlyInterest: yearlyInterest,
         savingsEndOfYear: currentSavings,
         yearlyContribution: yearlyContribution,
+        totalInvestedCapital: yearlyInterest + currentSavings,
       });
     }
 

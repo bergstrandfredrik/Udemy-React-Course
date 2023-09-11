@@ -1,10 +1,12 @@
+import ResultTableData from "./ResultTableData";
+
 import "./ResultTable.css";
 
 const ResultTable = (props) => {
   console.log(props.data);
 
   let resultData =
-    props.data !== [] ? (
+    props.data === null ? (
       <p className="no-result">No data to show</p>
     ) : (
       <table className="result">
@@ -18,13 +20,9 @@ const ResultTable = (props) => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>YEAR NUMBER</td>
-            <td>TOTAL SAVINGS END OF YEAR</td>
-            <td>INTEREST GAINED IN YEAR</td>
-            <td>TOTAL INTEREST GAINED</td>
-            <td>TOTAL INVESTED CAPITAL</td>
-          </tr>
+          {props.data.map((year) => {
+            return <ResultTableData data={year} />;
+          })}
         </tbody>
       </table>
     );
