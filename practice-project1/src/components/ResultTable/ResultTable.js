@@ -1,15 +1,15 @@
 import ResultTableData from "./ResultTableData";
 
-import "./ResultTable.css";
+import styles from "./ResultTable.module.css";
 
 const ResultTable = (props) => {
   console.log(props.data);
 
   let resultData =
     props.data === null ? (
-      <p className="no-result">No data to show</p>
+      <p className={styles["no-result"]}>No data to show</p>
     ) : (
-      <table className="result">
+      <table className={styles.result}>
         <thead>
           <tr>
             <th>Year</th>
