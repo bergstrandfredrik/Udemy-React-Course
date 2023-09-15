@@ -23,8 +23,8 @@ const SavingsForm = (props) => {
   const onResetHandler = () => {
     setCurrentSavings("");
     setYearlySavings("");
-    setCurrentSavings("");
     setExpectedInterest("");
+    setInvestmentDuration("");
   };
 
   return (

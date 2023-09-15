@@ -10,21 +10,17 @@ function App() {
   const [yearlyData, setYearyData] = useState(null);
 
   const calculateHandler = (userInput) => {
-    console.log(userInput["current-savings"]);
-
-    const yearlyDataDto = []; // per-year results
+    const yearlyDataDto = [];
 
     let currentSavings = +userInput["current-savings"]; // feel free to change the shape of this input object!
     const yearlyContribution = +userInput["yearly-contribution"]; // as mentioned: feel free to change the shape...
     const expectedReturn = +userInput["expected-return"] / 100;
     const duration = +userInput["duration"];
 
-    // The below code calculates yearly results (total savings, interest etc)
     for (let i = 0; i < duration; i++) {
       const yearlyInterest = currentSavings * expectedReturn;
       currentSavings += yearlyInterest + yearlyContribution;
       yearlyDataDto.push({
-        // feel free to change the shape of the data pushed to the array!
         year: i + 1,
         yearlyInterest: yearlyInterest,
         savingsEndOfYear: currentSavings,
@@ -34,7 +30,6 @@ function App() {
     }
 
     setYearyData(yearlyDataDto);
-    // do something with yearlyData ...
   };
 
   return (
@@ -42,8 +37,6 @@ function App() {
       <Header logo={logo} />
 
       <SavingsForm calculateHandler={calculateHandler} />
-      {/* Todo: Show below table conditionally (only once result data is available) */}
-      {/* Show fallback text if no data is available */}
       <ResultTable data={yearlyData} />
     </div>
   );
