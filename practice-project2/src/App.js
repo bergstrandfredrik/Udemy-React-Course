@@ -1,4 +1,5 @@
 import Modal from "./UI/modal";
+import UserInput from "./components/UserInput";
 
 import "./index.css";
 
@@ -6,19 +7,7 @@ function App() {
   return (
     <div className="container">
       <Modal />
-      <div className="box input-form">
-        <form>
-          <div className="input">
-            <label>Username</label>
-            <input />
-          </div>
-          <div className="input">
-            <label>Age(Years)</label>
-            <input type="number" />
-          </div>
-          <button className="button">Add User</button>
-        </form>
-      </div>
+      <UserInput />
       <ul>
         <li className="box">
           <p>Fredrik (32 years old)</p>
