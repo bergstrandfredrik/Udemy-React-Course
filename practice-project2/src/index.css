@@ -14,39 +14,3 @@ body {
   font-weight: bolder;
   width: 100%;
 }
-
-.box {
-  margin: 10px auto;
-  width: 60%;
-  background-color: white;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-input {
-  margin: 5px 0;
-  width: 100%;
-}
-
-button {
-  color: white;
-  background-color: rgb(76, 20, 128);
-  border: 0;
-  margin: 10px 0 0 0;
-  padding: 5px 10px 5px 10px;
-}
-
-button:hover {
-  cursor: pointer;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li p {
-  padding: 5px;
-  margin: 5px;
-  border: 2px solid rgb(218, 210, 210);
-}
