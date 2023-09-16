@@ -1,14 +1,11 @@
+import Modal from "./UI/modal";
+
 import "./index.css";
 
 function App() {
   return (
     <div className="container">
-      <div className="modal">
-        <div className="modal-box">
-          <p>Invalid input</p>
-          <button>Back</button>
-        </div>
-      </div>
+      <Modal />
       <div className="box input-form">
         <form>
           <div className="input">
