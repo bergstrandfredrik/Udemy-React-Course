@@ -13,11 +13,15 @@ function App() {
     setUsersList([...usersList, user]);
   };
 
+  const RemoveUserHandler = (index) => {
+    usersList.splice(index, 1);
+    setUsersList([...usersList]);
+  };
   return (
     <div className="container">
       <Modal />
       <UserInput userInput={AddUserHandler} />
-      <UsersList listOfUser={usersList} />
+      <UsersList listOfUser={usersList} removeUser={RemoveUserHandler} />
     </div>
   );
 }
