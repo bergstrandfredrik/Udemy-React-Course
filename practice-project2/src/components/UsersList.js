@@ -1,20 +1,18 @@
 import styles from "./UsersList.module.css";
 
-const UsersList = () => {
+const UsersList = (props) => {
+  console.log(props.listOfUser);
   return (
     <ul>
-      <li className={styles.box}>
-        <p>Fredrik (32 years old)</p>
-      </li>
-      <li className={styles.box}>
-        <p>Max (31 years old)</p>
-      </li>
-      <li className={styles.box}>
-        <p>John (56 years old)</p>
-      </li>
-      <li className={styles.box}>
-        <p>Jane (54 years old)</p>
-      </li>
+      {props.listOfUser.map((user) => {
+        return (
+          <li className={styles.box} key={user.userName + user.userAge}>
+            <p>
+              {user.userName} ({user.userAge} years old)
+            </p>
+          </li>
+        );
+      })}
     </ul>
   );
 };

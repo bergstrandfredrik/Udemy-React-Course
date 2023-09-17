@@ -10,9 +10,7 @@ function App() {
   const [usersList, setUsersList] = useState([]);
 
   const AddUserHandler = (user) => {
-    console.log(user);
-
-    setUsersList(user);
+    setUsersList([...usersList, user]);
   };
 
   return (
