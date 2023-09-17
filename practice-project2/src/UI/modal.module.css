@@ -8,13 +8,30 @@
   background-color: rgba(88, 81, 81, 0.802);
 }
 
+.modal-header {
+  background-color: rgb(76, 20, 128);
+  color: white;
+  text-align: left;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+}
+
 .modal-box {
-  text-align: center;
+  display: block;
+  text-align: left;
   background-color: white;
   position: fixed;
   width: 60%;
-  padding: 50px;
-  top: 10%;
+  top: 30%;
   left: 20%;
   border-radius: 10px;
+}
+
+.modal-div {
+  margin: 20px 10px;
+}
+
+.modal-button {
+  text-align: right;
+  margin: 10px;
 }
